@@ -1,4 +1,3 @@
-import * as Bluebird from 'bluebird';
 import { EventEmitter } from 'events';
 import { Readable, Transform, Writable } from 'stream';
 
@@ -29,7 +28,7 @@ declare module 'rethinkdb' {
       toStream(connection: Connection, type: { transform: true }): Transform;
       toStream(type: { transform: true }): Transform;
 
-      run(options?: RunOptions): Bluebird<T>;
+      run(options?: RunOptions): Promise<T>;
     }
   }
 }
