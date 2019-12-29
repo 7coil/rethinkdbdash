@@ -2,14 +2,15 @@ import { EventEmitter } from 'events';
 import { Readable, Transform, Writable } from 'stream';
 
 declare module 'rethinkdb' {
-
-
   interface RunOptions {
     /**
      * When true, the driver will not automatically coerce cursor results to an array (default: `false`).
      */
     cursor: boolean;
   }
+
+  // Allow the user to omit the `.run()`
+  interface RArray<T> extends Promise<RethinkDB.ArrayResult<T>> { }
 
   namespace r {
     export interface Run<T> {
