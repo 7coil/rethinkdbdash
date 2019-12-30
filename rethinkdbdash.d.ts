@@ -10,7 +10,8 @@ declare module 'rethinkdb' {
   }
 
   // Allow the user to omit the `.run()`
-  interface RArray<T> extends Promise<RethinkDB.ArrayResult<T>> { }
+  interface RArray<T> extends PromiseLike<Array<T>> { }
+  interface RObject<T> extends PromiseLike<T> { }
 
   namespace r {
     export interface Run<T> {
