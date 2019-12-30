@@ -1,6 +1,10 @@
 # Typed rethinkdbdash
 
+
 The type definition for [`rethinkdbdash`](https://github.com/neumino/rethinkdbdash).
+
+## Does it work?
+No.
 
 ## Attribution
 
